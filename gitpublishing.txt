@@ -1,0 +1,13 @@
+# To publish your code on git, follow the following steps:
+
+1. Firstly make sure that your github is setup for publishing, SSH key initialization.
+
+2. After settting up the github, you need to write the following command in the terminal:
+
+=> git init 
+This will initialize your code
+
+3. create a .gitignore file and add node_modules and .env file in it.
+
+4. write the next command which is : 
+=> git add . (This will add all the files of your code on github, except .gitignore and the files written within the .gitignore file).

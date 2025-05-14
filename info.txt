@@ -1,0 +1,26 @@
+1. npm init :- We use this code in the terminal to initialize an application from node package manager(npm). 
+2. If following error occurs:
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+This means that we're using the ls command in windows command prompt, which doesn't recognize Unix-style commands like ls.
+
+to fix this, we use the following command in Windows Command Prompt:
+
+C:\Users\sanya\Developer\chai-aur-deploy>dir
+
+instead of:
+C:\Users\sanya\Developer\chai-aur-deploy>ls ( we use this in bash, Powershell, or Git Bash).
+
+3. If a file is showing in terminal when we use dir, then we can run that file using node file.js
+
+4. But to run that from package.json, we need to form certain script commands.
+
+By writing a script command such as:
+
+"start": "node index.js"
+
+what happens is basically when you write npm run start in your terminal, the command node index.js will get executed from your package.json file.
+
+# Doing this is beneficial while building a server.
+
