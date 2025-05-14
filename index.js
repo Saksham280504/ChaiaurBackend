@@ -7,6 +7,42 @@ const express = require('express');
 // The above line is a CommonJS module syntax, while the below line is an ES module syntax.
 const app = express();
 const port = 4000;
+
+const githubData = {
+  "login": "Saksham280504",
+  "id": 170913701,
+  "node_id": "U_kgDOCi_vpQ",
+  "avatar_url": "https://avatars.githubusercontent.com/u/170913701?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/Saksham280504",
+  "html_url": "https://github.com/Saksham280504",
+  "followers_url": "https://api.github.com/users/Saksham280504/followers",
+  "following_url": "https://api.github.com/users/Saksham280504/following{/other_user}",
+  "gists_url": "https://api.github.com/users/Saksham280504/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/Saksham280504/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/Saksham280504/subscriptions",
+  "organizations_url": "https://api.github.com/users/Saksham280504/orgs",
+  "repos_url": "https://api.github.com/users/Saksham280504/repos",
+  "events_url": "https://api.github.com/users/Saksham280504/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/Saksham280504/received_events",
+  "type": "User",
+  "user_view_type": "public",
+  "site_admin": false,
+  "name": null,
+  "company": null,
+  "blog": "",
+  "location": null,
+  "email": null,
+  "hireable": null,
+  "bio": null,
+  "twitter_username": null,
+  "public_repos": 5,
+  "public_gists": 0,
+  "followers": 0,
+  "following": 1,
+  "created_at": "2024-05-27T05:25:56Z",
+  "updated_at": "2025-05-14T05:43:51Z"
+}
 // This here is a port. A computer, in the context of TCP/IP networking, can have 65,535 virtual ports. These ports are numbered from 0 to 65535 and are used to identify different network services or applications on a computer. 
 
 app.get('/', (req, res) => {
@@ -23,6 +59,10 @@ app.get('/login', (req, res)=> {
 app.get('/youtube', (req, res)=>{
     res.send('<h2>Saksham Modi</h2>');
 });
+
+app.get('/github', (req, res) => {
+  res.json(githubData);
+})
 
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${port}`)

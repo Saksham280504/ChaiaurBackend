@@ -1,5 +1,7 @@
 # To publish your code on git, follow the following steps:
 
+# First step is to make a new github repository on github, and then follow these steps on your terminal which are also given there on github, once you create your repo there.
+
 1. Firstly make sure that your github is setup for publishing, SSH key initialization.
 
 2. After settting up the github, you need to write the following command in the terminal:
@@ -11,3 +13,62 @@ This will initialize your code
 
 4. write the next command which is : 
 => git add . (This will add all the files of your code on github, except .gitignore and the files written within the .gitignore file).
+
+5. A warning came which showed that my package.json file was in LF (unix/linux line ending) but I was on windows, due to which on next touch, the git will replace LF from CRLF (windows line ending).
+
+=> LF stands for Line Feed
+=> CRLF stands for Carriage return + Line Feed
+
+# This warning can be ignored, as github manages it on its own.
+
+6. After that write the command: 
+=> git commit -m "first commit"
+
+=> This showed that Author identity unknown
+=> For this I ran two commands:
+
+i. git config --global user.email "you@example.com"
+(you use your general email id, and "" are important)
+
+ii. git config --global user.name "Your name"
+("Saksham280504")
+
+7. Again run the command:
+=> git commit -m "first commit"
+
+=>[master (root-commit) efdd905] first commit
+ 6 files changed, 950 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 gitpublishing.txt
+ create mode 100644 index.js
+ create mode 100644 info.txt
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+
+# This means that all the files are now ready for push.
+
+8. write the command:
+=> git branch -M main
+
+9. write the command:
+=> git remote add origin https://github.com/Saksham280504/ChaiaurBackend.git
+
+10.write the command:
+git push -u origin main
+
+11. Do your login on github and allow the transfer
+
+12.After that:
+
+info: please complete authentication in your browser...
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 10.60 KiB | 5.30 MiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Saksham280504/ChaiaurBackend.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+# If this shows, then your code has been added on github.
